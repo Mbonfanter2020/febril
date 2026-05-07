@@ -1,0 +1,172 @@
+{
+  "version": "V2D_1.0",
+  "features_originales": [
+    "Grupo edad años",
+    "Sexo",
+    "Area",
+    "Tiempo dias de inicio de la fiebre en fecha de consulta",
+    "Vacunación",
+    "Antecedentes personales de patologías",
+    "Contacto epidemiologico con enfermedades infecciosas",
+    "Exposicion ambiental",
+    "Estado nutricional",
+    "Glasgow",
+    "Nivel de Triage por el TEP",
+    "Cayados absolutos",
+    "Plaquetas cel/mm3",
+    "Albúmina sérica g/dl",
+    "Globulina sérica g/dl",
+    "Procalcitonina ng/mL",
+    "Leucocitos cel/mm3",
+    "Proteina C reactiva mg/Dl"
+  ],
+  "features_nuevas_vs_v2c": [
+    "Procalcitonina ng/mL",
+    "Leucocitos cel/mm3",
+    "Proteina C reactiva mg/Dl"
+  ],
+  "features_post_ohe": [
+    "Tiempo dias de inicio de la fiebre en fecha de consulta",
+    "Glasgow",
+    "Cayados absolutos",
+    "Plaquetas cel/mm3",
+    "Albúmina sérica g/dl",
+    "Globulina sérica g/dl",
+    "Procalcitonina ng/mL",
+    "Leucocitos cel/mm3",
+    "Proteina C reactiva mg/Dl",
+    "Albúmina_sérica_g_dl_missing",
+    "Globulina_sérica_g_dl_missing",
+    "Procalcitonina_ng_mL_missing",
+    "Proteina_C_reactiva_mg_Dl_missing",
+    "Grupo edad años_0-1",
+    "Grupo edad años_2-5",
+    "Grupo edad años_6-12",
+    "Grupo edad años_Otro",
+    "Sexo_Femenino",
+    "Sexo_Masculino",
+    "Area_Rural",
+    "Area_Urban",
+    "Vacunación_Completo",
+    "Vacunación_Incompleto",
+    "Antecedentes personales de patologías_Anemia por déficit de hierro",
+    "Antecedentes personales de patologías_Asma",
+    "Antecedentes personales de patologías_Bronquiolitis",
+    "Antecedentes personales de patologías_Neumonía adquirida en la comunidad",
+    "Antecedentes personales de patologías_Ninguno",
+    "Antecedentes personales de patologías_Otitis media aguda",
+    "Antecedentes personales de patologías_Otro",
+    "Antecedentes personales de patologías_Pretérmino",
+    "Contacto epidemiologico con enfermedades infecciosas_Neumonía adquirida en la comunidad",
+    "Contacto epidemiologico con enfermedades infecciosas_Ninguno",
+    "Contacto epidemiologico con enfermedades infecciosas_Otro",
+    "Contacto epidemiologico con enfermedades infecciosas_Rinofaringitis",
+    "Contacto epidemiologico con enfermedades infecciosas_Sinusitis",
+    "Exposicion ambiental_Humedad",
+    "Exposicion ambiental_Ninguno",
+    "Exposicion ambiental_Polución ambiental",
+    "Exposicion ambiental_Polvo casero",
+    "Exposicion ambiental_Preservativos químicos",
+    "Exposicion ambiental_Tabaquismo",
+    "Estado nutricional_Desnutrición",
+    "Estado nutricional_Normal",
+    "Estado nutricional_Riesgo de desnutrición",
+    "Nivel de Triage por el TEP_Nivel I",
+    "Nivel de Triage por el TEP_Nivel II",
+    "Nivel de Triage por el TEP_Nivel III",
+    "Nivel de Triage por el TEP_Nivel IV"
+  ],
+  "cols_numericas": [
+    "Tiempo dias de inicio de la fiebre en fecha de consulta",
+    "Glasgow",
+    "Cayados absolutos",
+    "Plaquetas cel/mm3",
+    "Albúmina sérica g/dl",
+    "Globulina sérica g/dl",
+    "Procalcitonina ng/mL",
+    "Leucocitos cel/mm3",
+    "Proteina C reactiva mg/Dl",
+    "Albúmina_sérica_g_dl_missing",
+    "Globulina_sérica_g_dl_missing",
+    "Procalcitonina_ng_mL_missing",
+    "Proteina_C_reactiva_mg_Dl_missing"
+  ],
+  "cols_categoricas": [
+    "Grupo edad años",
+    "Sexo",
+    "Area",
+    "Vacunación",
+    "Antecedentes personales de patologías",
+    "Contacto epidemiologico con enfermedades infecciosas",
+    "Exposicion ambiental",
+    "Estado nutricional",
+    "Nivel de Triage por el TEP"
+  ],
+  "vars_missing_indicator": [
+    {
+      "variable": "Albúmina sérica g/dl",
+      "columna": "Albúmina_sérica_g_dl_missing",
+      "nan_pct_train": 0.4834
+    },
+    {
+      "variable": "Globulina sérica g/dl",
+      "columna": "Globulina_sérica_g_dl_missing",
+      "nan_pct_train": 0.4834
+    },
+    {
+      "variable": "Procalcitonina ng/mL",
+      "columna": "Procalcitonina_ng_mL_missing",
+      "nan_pct_train": 0.1424
+    },
+    {
+      "variable": "Proteina C reactiva mg/Dl",
+      "columna": "Proteina_C_reactiva_mg_Dl_missing",
+      "nan_pct_train": 0.096
+    }
+  ],
+  "categorias_raras": {
+    "Grupo edad años": [
+      "13-17"
+    ],
+    "Antecedentes personales de patologías": [
+      "Amigdalitis aguda",
+      "Impétigo",
+      "Infección urinaria",
+      "Sinusitis",
+      "Secuelas enfermedad neurológica",
+      "Anemia de células falciformes",
+      "Rinitis",
+      "Malformación congénita del SNC",
+      "Laringomalacia",
+      "Convulsión febril",
+      "Leucemia Linfoide aguda",
+      "Dermatitis atópica",
+      "Cardiopatía congénita",
+      "Sepsis neonatal",
+      "Riñón poliquístico",
+      "Rinofaringitis",
+      "Dengue",
+      "Desnutrición",
+      "Leucemia linfoide aguda",
+      "Fibrosis quística",
+      "Neoplasia",
+      "Mucopolisacaridosis ",
+      "Mucopolisacaridosis",
+      "Meningitis",
+      "Hipertrofia de adenoides",
+      "Trisomía 21",
+      "Tuberculosis pulmonar"
+    ],
+    "Contacto epidemiologico con enfermedades infecciosas": [
+      "Bronquiolitis",
+      "Impétigo",
+      "Amigdalitis",
+      "Dengue",
+      "Enfermedad diarreica aguda",
+      "Tuberculosis pulmonar"
+    ],
+    "Estado nutricional": [
+      "Obesidad"
+    ]
+  }
+}

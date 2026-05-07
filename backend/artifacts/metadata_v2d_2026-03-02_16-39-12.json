@@ -1,0 +1,94 @@
+{
+  "version": "V2D_1.0",
+  "fecha": "2026-03-02_16-39-12",
+  "modelo_nombre": "Extra_Trees_Calibrado",
+  "calibrado": true,
+  "metodo_calibracion": "sigmoid (Platt Scaling)",
+  "conjunto_calibracion": "val_set (20 % — nunca visto en train)",
+  "split_scheme": "70/20/10 (train/val/test)",
+  "variables_clinicas": [
+    "Grupo edad años",
+    "Sexo",
+    "Area",
+    "Tiempo dias de inicio de la fiebre en fecha de consulta",
+    "Vacunación",
+    "Antecedentes personales de patologías",
+    "Contacto epidemiologico con enfermedades infecciosas",
+    "Exposicion ambiental",
+    "Estado nutricional",
+    "Glasgow",
+    "Nivel de Triage por el TEP",
+    "Cayados absolutos",
+    "Plaquetas cel/mm3",
+    "Albúmina sérica g/dl",
+    "Globulina sérica g/dl",
+    "Procalcitonina ng/mL",
+    "Leucocitos cel/mm3",
+    "Proteina C reactiva mg/Dl"
+  ],
+  "n_features_originales": 18,
+  "n_features_post_ohe": 49,
+  "encoding": "OneHotEncoder(drop=None, handle_unknown=ignore)",
+  "escalado": "No (ExtraTrees basado en árboles — invariante a escala)",
+  "balanceo": "SMOTE (dentro de ImbPipeline → cero leakage en CV)",
+  "pesos_clinicos": {
+    "0": 1.0,
+    "1": 2.0,
+    "2": 5.0
+  },
+  "random_seed": 42,
+  "tamanios_conjuntos": {
+    "train": 302,
+    "val": 87,
+    "test": 44,
+    "total": 433
+  },
+  "metricas_val": {
+    "accuracy": 0.977011,
+    "f1_macro": 0.982176,
+    "f1_weighted": 0.976908,
+    "recall_severa": 1.0,
+    "scorer_clinico": 0.991088,
+    "errores_sev_leve": 0
+  },
+  "metricas_test": {
+    "accuracy": 0.886364,
+    "f1_macro": 0.885835,
+    "f1_weighted": 0.885887,
+    "recall_severa": 0.8,
+    "precision_macro": 0.924444,
+    "scorer_clinico": 0.882918,
+    "errores_sev_leve": 0,
+    "gap_sobreajuste": 0.033771
+  },
+  "bootstrap_ci_95_test": {
+    "accuracy": "[0.7727, 0.9773]",
+    "f1_macro": "[0.7227, 0.9783]",
+    "recall_severa": "[0.3313, 1.0000]",
+    "scorer_clinico": "[0.6559, 0.9892]"
+  },
+  "metricas_nested_cv": {
+    "accuracy": "0.8823±0.0196",
+    "f1_macro": "0.8931±0.0203",
+    "scorer_clinico": "0.9092±0.0209",
+    "recall_severa": "0.8756±0.0381",
+    "errores_sev_leve_total": 0
+  },
+  "clases": {
+    "0": "Leve",
+    "1": "Moderada",
+    "2": "Severa"
+  },
+  "novedades_vs_v2c": [
+    "Agregada: Procalcitonina ng/mL (~14 % NaN → indicador _missing)",
+    "Agregada: Leucocitos cel/mm3 (~0 % NaN)",
+    "Agregada: Proteina C reactiva mg/Dl (~9 % NaN → indicador _missing)",
+    "Split 70/20/10 (antes 80/20)",
+    "SMOTE dentro de ImbPipeline → cero leakage en CV",
+    "Calibración sigmoid sobre val set (antes isotónica sobre train)",
+    "OHE drop=None (antes drop=first)",
+    "StandardScaler eliminado (innecesario para árboles)",
+    "Métricas en 3 conjuntos + Bootstrap CIs 95 %",
+    "Nested CV grid expandido: n_estimators=[100,200,300], max_depth=[None,10,15]"
+  ]
+}
