@@ -20,8 +20,8 @@ services:
       - SUPABASE_JWT_SECRET=${SUPABASE_JWT_SECRET}
       - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
       - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-*}
-      - PIPELINE_PATH=./artifacts/pipeline_completo_v2d.pkl
-      - METADATA_PATH=./artifacts/metadata_v2d.json
+      - PIPELINE_PATH=./artifacts/pipeline_completo_v2d_2026-03-02_16-39-12.pkl
+      - METADATA_PATH=./artifacts/metadata_v2d_2026-03-02_16-39-12.json
       - FEATURES_PATH=./artifacts/feature_names_v2d.json
     restart: unless-stopped
     healthcheck:
